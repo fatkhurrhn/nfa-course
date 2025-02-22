@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f5f6fa;
+        }
+        .gallery {
+            text-align: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        marquee {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Gallery</h1>
+    <marquee behavior="scroll" direction="left">
+        <img src="/api/placeholder/200/150" alt="Project 1">
+        <img src="/api/placeholder/200/150" alt="Project 2">
+        <img src="/api/placeholder/200/150" alt="Project 3">
+        <img src="/api/placeholder/200/150" alt="Project 4">
+        <img src="/api/placeholder/200/150" alt="Project 5">
+    </marquee>
+    <div class="gallery">
+        <a href="project1.html" target="_blank"><img src="https://wallpaperaccess.com/full/4723250.jpg" alt="Project 1"></a>
+        <a href="project2.html" target="_blank"><img src="https://wallpaperaccess.com/full/4723250.jpg" alt="Project 2"></a>
+        <a href="project3.html" target="_blank"><img src="https://wallpaperaccess.com/full/4723250.jpg" alt="Project 3"></a>
+    </div>
+</body>
+</html>
