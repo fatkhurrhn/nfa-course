@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menghitung Luas Bangun Datar</title>
+    <title>PJE Tugas 1 - Menghitung Luas Bangun Datar</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
@@ -37,30 +37,30 @@
     <script>
         let output = "";
 
-        // Fungsi untuk menghitung luas persegi panjang
+        // fungi utk menghitung luas persegi panjang
         function hitungLuasPersegiPanjang(panjang, lebar) {
             return panjang * lebar;
         }
         
-        // Fungsi untuk menghitung luas bujur sangkar
+        // fungsi utk menghitung luas bujur sangkar
         function hitungLuasBujurSangkar(sisi) {
             return sisi * sisi;
         }
         
-        // Fungsi untuk menghitung luas segitiga
+        // fungsi utk menghitung luas segitiga
         function hitungLuasSegitiga(alas, tinggi) {
             return (alas * tinggi) / 2;
         }
         
-        // Deklarasi variabel untuk panjang, lebar, sisi, alas, dan tinggi
+        // deklarasi variabel utk panjang, lebar, sisi, alas, dan juga tinggi
         const panjang = 10, lebar = 5, sisi = 7, alas = 8, tinggi = 6;
 
-        // Menampilkan hasil perhitungan luas bangun datar
+        // menampilkan hasil perhitungan luas bangun datar
         output += `<h3><u>Persegi Panjang</u></h3> Panjang: ${panjang} | Lebar: ${lebar} <br> <strong>Luas: ${hitungLuasPersegiPanjang(panjang, lebar)}</strong><br><br>`;
         output += `<h3><u>Bujur Sangkar</u></h3>Sisi: ${sisi} <br> <strong>Luas: ${hitungLuasBujurSangkar(sisi)}</strong><br><br>`;
         output += `<h3><u>Segitiga</u></h3>Alas: ${alas} | Tinggi: ${tinggi} <br> <strong>Luas: ${hitungLuasSegitiga(alas, tinggi)}</strong>`;
 
-        // Menampilkan hasil ke dalam elemen HTML
+        // menampilkan hasil ke dalam elemen html
         document.getElementById("result").innerHTML = output;
     </script>
 </body>
