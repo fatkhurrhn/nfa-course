@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJE Tugas2 - Data Pegawai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container py-4">
+    <h2 class="text-center mb-4">Tugas PJE Pertemuan 2</h2>
+    
+    <div class="card p-4 mb-4">
+        <form id="employeeForm" class="row g-3">
+            <div class="col-md-6">
+                <label for="nama" class="form-label">Nama Pegawai</label>
+                <input type="text" id="nama" name="nama" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="umur" class="form-label">Umur</label>
+                <input type="number" id="umur" name="umur" class="form-control" required min="18" max="100">
+            </div>
+            <div class="col-md-6">
+                <label for="jabatan" class="form-label">Jabatan</label>
+                <select id="jabatan" name="jabatan" class="form-select" required>
+                    <option value="">--pilih jabatan--</option>
+                    <option value="Manajer">Manajer</option>
+                    <option value="Asisten Manajer">Asisten Manajer</option>
+                    <option value="Staff">Staff</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="status" class="form-label">Status</label>
+                <select id="status" name="status" class="form-select" required>
+                    <option value="">--pilih status--</option>
+                    <option value="Menikah">Menikah</option>
+                    <option value="Belum Menikah">Belum Menikah</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-success">Tambah Pegawai</button>
+            </div>
+        </form>
+    </div>
+    
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Nama Pegawai</th>
+                <th>Umur</th>
+                <th>Jabatan</th>
+                <th>Status</th>
+                <th>Gaji Pokok</th>
+                <th>Tunjangan Jabatan</th>
+                <th>BPJS</th>
+                <th>Tunjangan Keluarga</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+        <tfoot id="tableFoot" class="table-light">
+        </tfoot>
+    </table>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
