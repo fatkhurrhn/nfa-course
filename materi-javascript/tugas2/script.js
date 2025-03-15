@@ -23,7 +23,7 @@ function hitungTotalGajiSeluruh() {
         const tunjanganJabatan = gajiPokok * 0.15;
         const bpjs = gajiPokok * 0.10;
         const tunjanganKeluarga = pegawai.status === "Menikah" ? gajiPokok * 0.20 : 0;
-        return total + gajiPokok + tunjanganJabatan + tunjanganKeluarga - bpjs;
+        return total + gajiPokok + tunjanganJabatan + tunjanganKeluarga + bpjs;
     }, 0);
 }
 
@@ -46,6 +46,7 @@ function renderTabel() {
             <td>${formatRupiah(tunjanganJabatan)}</td>
             <td>${formatRupiah(bpjs)}</td>
             <td>${formatRupiah(tunjanganKeluarga)}</td>
+            <td>${formatRupiah(gajiPokok + tunjanganJabatan + tunjanganKeluarga + bpjs)}</td>
         </tr>`;
         tbody.innerHTML += row;
     });
@@ -53,7 +54,7 @@ function renderTabel() {
     document.getElementById("tableFoot").innerHTML = `
         <tr>
             <td colspan="4">Total Gaji Seluruh Pegawai</td>
-            <td colspan="4">${formatRupiah(hitungTotalGajiSeluruh())}</td>
+            <td colspan="5">${formatRupiah(hitungTotalGajiSeluruh())}</td>
         </tr>
     `;
 }
