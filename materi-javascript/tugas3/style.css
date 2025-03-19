@@ -1,0 +1,24 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    font-weight: bold;
+    padding: 12px;
+}
+

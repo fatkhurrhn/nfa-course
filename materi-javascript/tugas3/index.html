@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJE Tugas 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="text-center">PJE Tugas 3 - Sistem Manajemen Toko Online</h1>
+            <hr>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card mb-3">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Tambah Produk Baru</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="formTambahProduk">
+                            <div class="mb-3">
+                                <label for="namaProduk" class="form-label">Nama Produk</label>
+                                <input type="text" class="form-control" id="namaProduk" placeholder="Masukan Nama Produk" required>
+                            </div>
+                            <div class="row mb-3 gap">
+                                <div class="col-md-6">
+                                    <label for="hargaProduk" class="form-label">Harga (Rp)</label>
+                                    <input type="number" class="form-control" id="hargaProduk" placeholder="Masukan Harga Produk" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="stokProduk" class="form-label">Stok</label>
+                                    <input type="number" class="form-control" id="stokProduk" placeholder="Masukan Stok Produk" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Tambah Produk</button>
+                        </form>
+                    </div>
+                </div>
+                <form id="formHapusProduk">
+                    <label for="idProduk" class="form-label">Hapus Lewat ID Produk</label>
+                    <div class="d-flex gap-2">
+                        <input type="number" class="form-control" id="idProduk" placeholder="masukan ID produk yang akan dihapus" required>
+                        <button type="submit" class="btn btn-danger flex-grow-1">Hapus</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Daftar Produk</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="dataTable" class="table table-bordered table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th style="width: 10%;">ID</th>
+                                        <th>Nama Produk</th>
+                                        <th>Harga (Rp)</th>
+                                        <th>Stok</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabelProduk">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Notifikasi -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="notifikasi" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto" id="notifikasiJudul">Notifikasi</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body" id="notifikasiPesan">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
+</body>
+
+</html>
