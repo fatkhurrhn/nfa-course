@@ -2,7 +2,7 @@
 import users from "./data.js";
 
 const index = () => {
-    // Tampilkan data menggunakan map()
+    // Tampilkan data menggunakan map() dalam format asli
     const userList = users.map((user, index) => {
         console.log(`User ${index + 1}:`);
         console.log(`Nama: ${user.nama}`);
@@ -15,31 +15,43 @@ const index = () => {
     return userList;
 }
 
-const store = (newUser) => { 
-    // Tambahkan data 
-    users.push(
-        {
-            nama: 'Kurniawan Adi',
-            umur: 30,
-            alamat: 'Jl. Patimura No. 15, Bogor',
-            email: 'kurniawan.adi@workmail.com'
+const store = () => { 
+    // Tambahkan data dengan detail spesifik
+    const newUsers = [
+        { 
+            nama: 'Muhammad Rizky', 
+            umur: 30, 
+            alamat: 'Jl. Kenangan No. 12, Jakarta', 
+            email: 'muhammad.rizky@example.com' 
         },
-        {
-            nama: 'Lia Damayanti',
-            umur: 29,
-            alamat: 'Jl. Sultan Agung No. 22, Bekasi',
-            email: 'lia.damayanti@personal.id'
+        { 
+            nama: 'Siti Rahayu', 
+            umur: 28, 
+            alamat: 'Jl. Merdeka No. 45, Bandung', 
+            email: 'siti.rahayu@example.com' 
         }
-    );
-    console.log('Data berhasil ditambahkan!');
+    ];
+
+    // Tampilkan data yang akan ditambahkan DALAM FORMAT OBJEK
+    console.log('Data yang akan ditambahkan:');
+    newUsers.forEach((user) => {
+        console.log(user);
+    });
+
+    // Push data baru ke array users
+    users.push(...newUsers);
+    
+    console.log('\nData berhasil ditambahkan!');
     return users;
 }
 
 const destroy = () => {
-    // Hapus data (misalnya hapus data terakhir)
+    // Hapus data terakhir
     const removedUser = users.pop();
-    console.log('Data terakhir berhasil dihapus:');
+    
+    console.log('Data terakhir yang dihapus:');
     console.log(removedUser);
+    
     return users;
 }
 
