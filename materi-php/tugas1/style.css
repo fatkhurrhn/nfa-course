@@ -124,7 +124,6 @@ input[type="number"]:focus {
     background-color: white;
 }
 
-/* Untuk menghilangkan spinner di semua browser */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
