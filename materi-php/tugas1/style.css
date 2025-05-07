@@ -1,0 +1,244 @@
+:root {
+    --primary: #4361ee;
+    --primary-light: #eef2ff;
+    --success: #4cc9f0;
+    --success-light: #f0f9ff;
+    --danger: #f72585;
+    --danger-light: #fff0f3;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --border-radius: 10px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f7fa;
+    color: var(--dark);
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.dashboard {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+.panel {
+    flex: 1;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.form-panel {
+    background: linear-gradient(135deg, var(--primary-light) 0%, white 100%);
+}
+
+.result-panel {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: var(--transition);
+}
+
+.result-panel.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+h1 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 3px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: var(--transition);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.15);
+    background-color: white;
+}
+
+/* Untuk menghilangkan spinner di semua browser */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    transition: var(--transition);
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #3a56d4;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(67, 97, 238, 0.2);
+}
+
+.result-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 500;
+    color: var(--gray);
+    flex: 1;
+}
+
+.result-value {
+    font-weight: 600;
+    flex: 1;
+    text-align: right;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.status-lulus {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.status-remedial {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+.emoji {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.result-message {
+    margin-top: auto;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background-color: #f9f9f9;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.lulus-message {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.remedial-message {
+    background-color: var(--danger-light);
+    color: var(--danger);
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .result-panel {
+        transform: translateY(20px);
+    }
+
+    .result-panel.active {
+        transform: translateY(0);
+    }
+}
