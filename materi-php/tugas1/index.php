@@ -43,13 +43,13 @@
                     $status = "LULUS";
                     $status_class = "status-lulus";
                     $emoji = "🎓";
-                    $message = "Selamat! Anda telah berhasil melewati ujian dengan baik. Pertahankan prestasi Anda!";
+                    $message = "Selamat! Kamu telah berhasil melewati ujian dengan baik. Pertahankan prestasi mu yaaaa!";
                     $message_class = "lulus-message";
                 } else {
                     $status = "REMEDIAL";
                     $status_class = "status-remedial";
                     $emoji = "📝";
-                    $message = "Anda perlu mengikuti remedial. Gunakan kesempatan ini untuk memperbaiki nilai dan pemahaman materi.";
+                    $message = "Kamu perlu mengikuti remedial. Gunakan kesempatan ini untuk memperbaiki nilai dan pemahaman materi.";
                     $message_class = "remedial-message";
                 }
                 
